@@ -1,0 +1,122 @@
+{
+  "theme": "light",
+  "archetype": "4",
+  "archetype_name": "Swiss & High-Contrast (Adapted for Modernist Minimalism)",
+  "design_philosophy": "Elegant modernist minimalism. The app prioritizes clarity, generous whitespace, and highly readable typography. The UI is predominantly white and deep navy blue, with vibrant yellow acting as the single kinetic trigger for primary actions. The aesthetic draws from architectural minimalism and Dieter Rams, focusing on essential geometry, 1px sharp borders, and high contrast. Form inputs must be large, thumb-friendly, and unambiguously clear.",
+  "colors": {
+    "background": {
+      "default": "#FFFFFF",
+      "subtle": "#F8F9FA",
+      "muted": "#F1F5F9"
+    },
+    "text": {
+      "primary": "#0A192F",
+      "secondary": "#475569",
+      "inverse": "#FFFFFF",
+      "accent": "#FFC300"
+    },
+    "primary": {
+      "default": "#FFC300",
+      "hover": "#E6B000",
+      "foreground": "#0A192F"
+    },
+    "secondary": {
+      "default": "#0A192F",
+      "hover": "#061020",
+      "foreground": "#FFFFFF"
+    },
+    "border": {
+      "default": "rgba(10, 25, 47, 0.15)",
+      "focus": "#0A192F",
+      "divider": "rgba(10, 25, 47, 0.08)"
+    },
+    "status": {
+      "success": "#10B981",
+      "error": "#EF4444",
+      "warning": "#F59E0B"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scales": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight text-[#0A192F]",
+      "h2": "text-2xl md:text-3xl font-semibold tracking-tight text-[#0A192F]",
+      "h3": "text-xl md:text-2xl font-medium tracking-tight text-[#0A192F]",
+      "body_large": "text-lg leading-relaxed text-[#0A192F]",
+      "body": "text-base leading-relaxed text-[#475569]",
+      "small": "text-sm font-medium text-[#475569]",
+      "overline": "text-xs font-bold uppercase tracking-[0.15em] text-[#0A192F]"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6 md:p-8",
+    "section_gap": "gap-8 md:gap-12",
+    "item_gap": "gap-4 md:gap-6",
+    "border_radius": {
+      "button": "rounded-none",
+      "card": "rounded-sm",
+      "input": "rounded-none"
+    },
+    "grid_system": {
+      "mobile": "grid-cols-1 gap-6",
+      "tablet": "grid-cols-4 gap-6",
+      "desktop": "grid-cols-12 gap-8"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#FFC300] text-[#0A192F] font-bold h-14 px-8 rounded-none hover:bg-[#E6B000] transition-colors flex items-center justify-center border-2 border-transparent focus:ring-2 focus:ring-[#0A192F] focus:ring-offset-2",
+      "secondary": "bg-[#0A192F] text-white font-semibold h-14 px-8 rounded-none hover:bg-[#061020] transition-colors flex items-center justify-center border-2 border-transparent",
+      "outline": "bg-transparent border-2 border-[#0A192F] text-[#0A192F] font-semibold h-14 px-8 rounded-none hover:bg-[#F8F9FA] transition-colors flex items-center justify-center",
+      "ghost": "bg-transparent text-[#0A192F] font-semibold h-14 px-8 rounded-none hover:bg-[#F1F5F9] transition-colors flex items-center justify-center"
+    },
+    "inputs": {
+      "default": "h-14 w-full bg-[#F8F9FA] border border-[#0A192F]/20 text-[#0A192F] text-base px-4 rounded-none focus:bg-white focus:border-[#0A192F] focus:ring-1 focus:ring-[#0A192F] transition-all placeholder:text-[#475569]/60",
+      "label": "block text-sm font-bold text-[#0A192F] mb-2 uppercase tracking-wide",
+      "textarea": "min-h-[120px] w-full bg-[#F8F9FA] border border-[#0A192F]/20 text-[#0A192F] text-base p-4 rounded-none focus:bg-white focus:border-[#0A192F] focus:ring-1 focus:ring-[#0A192F] transition-all placeholder:text-[#475569]/60 resize-y"
+    },
+    "cards": {
+      "default": "bg-white border border-[#0A192F]/10 rounded-sm p-6 shadow-sm hover:shadow-md transition-shadow",
+      "elevated": "bg-white border border-[#0A192F]/10 rounded-sm p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+    },
+    "navigation": {
+      "bottom_tab": "bg-white border-t border-[#0A192F]/10 py-2 px-6 flex justify-between items-center h-16",
+      "header": "bg-white/90 backdrop-blur-md border-b border-[#0A192F]/10 py-4 px-6 flex items-center justify-between sticky top-0 z-50"
+    }
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-in-out",
+    "page_transition": "animate-in fade-in slide-in-from-bottom-4 duration-300",
+    "micro_interaction": "active:scale-[0.98] transition-transform duration-100"
+  },
+  "assets": {
+    "icons_library": "lucide-react",
+    "images": {
+      "login_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/1cf4b7a2-6350-4041-9d47-68e144d55a72/images/a7f84db9b8e45dd4c8ad5c1bdff5a354446aaeaf66994113411143413a750288.png",
+        "description": "Abstract modern minimalist architectural composition in vibrant yellow and midnight navy blue. Use for the login screen background (with an overlay or just top area) or branding hero sections."
+      },
+      "report_empty_state": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/1cf4b7a2-6350-4041-9d47-68e144d55a72/images/f3511a59fff92d307e9c6f0eff7d172f877a7b67fd5344c352251afd9e640114.png",
+        "description": "Minimalist 3D icon of a daily report clipboard with yellow and navy accents. Use for 'No reports yet' empty states or success screens."
+      }
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast_strategy": "Navy blue text (#0A192F) on white/yellow backgrounds meets AAA APCA standards. White text on Navy backgrounds meets AAA standards.",
+    "focus_strategy": "All interactive elements must display a stark #0A192F focus ring to maintain the architectural design language.",
+    "testing_attributes": "All buttons, inputs, and list items MUST include `data-testid` (e.g., `data-testid=\"login-submit-button\"`, `data-testid=\"report-answer-input\"`)."
+  },
+  "instructions_to_main_agent": [
+    "Use standard Tailwind classes mapped to these values for React Native Web / standard React setup, or use native styling equivalents referencing these hex codes for pure React Native components.",
+    "Maintain the strictly geometric, border-heavy aesthetic (Modernist Minimalism). Avoid soft pastel shadows. Rely on 1px borders and high contrast.",
+    "Ensure all forms are extremely accessible and thumb-friendly. The 'Next' or 'Submit' buttons should span the full width of the mobile viewport minus padding.",
+    "The primary action button must always be Yellow (#FFC300) with Navy text (#0A192F).",
+    "Incorporate the provided AI-generated login_background image into the Authentication flow. Ensure text readability over it by using a gradient overlay or solid card if necessary.",
+    "Translate all user-facing text to Polish ('Zaloguj', 'Raport Pracy', 'Zapisz', 'Zakończ dzień') as requested in the problem statement."
+  ]
+}
