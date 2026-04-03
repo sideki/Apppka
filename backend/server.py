@@ -49,6 +49,20 @@ api_router = APIRouter(prefix="/api")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# ---- Health Check ----
+
+@api_router.get("/")
+async def root():
+    return {"status": "ok", "app": "Raport Pracy API"}
+
+@api_router.get("/health")
+async def health_check():
+    try:
+        await db.command("ping")
+        return {"status": "healthy", "database": "connected"}
+    except Exception:
+        return {"status": "unhealthy", "database": "disconnected"}
+
 # ---- Auth Helper ----
 
 async def get_current_user(request: Request) -> dict:
