@@ -277,12 +277,13 @@ async def close_report(report_id: str, request: Request):
     return {"success": True}
 
 @api_router.get("/reports")
-async def get_reports(request: Request):
+async def get_reports(request: Request, skip: int = 0, limit: int = 50):
     user = await get_current_user(request)
     query = {} if user["role"] == "admin" else {"user_id": user["_id"]}
-    cursor = db.reports.find(query, {"_id": 0}).sort("created_at", -1)
-    reports = await cursor.to_list(200)
-    return reports
+    total = await db.reports.count_documents(query)
+    cursor = db.reports.find(query, {"_id": 0}).sort("created_at", -1).skip(skip).limit(limit)
+    reports = await cursor.to_list(limit)
+    return {"reports": reports, "total": total, "skip": skip, "limit": limit}
 
 @api_router.get("/reports/{report_id}")
 async def get_report(report_id: str, request: Request):

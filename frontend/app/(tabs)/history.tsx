@@ -25,7 +25,7 @@ export default function HistoryScreen() {
   const loadReports = useCallback(async () => {
     try {
       const data = await apiFetch('/reports');
-      setReports(data || []);
+      setReports(data?.reports || data || []);
     } catch (e) {
       console.error(e);
     } finally {
